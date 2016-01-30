@@ -6,9 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @Table(name = "TB_DISCIPLINAS")
@@ -22,7 +21,7 @@ public class Disciplina {
 	@Column(name = "DESCRICAO")
 	private String descricao;
 	
-//	@ManyToAny
+	@ManyToOne
 	@JoinColumn(name = "COD_PROFESSOR")
 	private Professor professor;
 	

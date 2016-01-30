@@ -1,6 +1,5 @@
 package br.com.uniph.dominio.entidade;
 
-import java.sql.Blob;
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -38,7 +37,7 @@ public class Professor {
 	private Calendar dataDeCadastro;
 	
 	@Column(name = "CURRICULO")
-	private Blob curriculo;
+	private String curriculo;
 	
 	public Long getId() {
 		return id;
@@ -88,11 +87,11 @@ public class Professor {
 		this.dataDeCadastro = dataDeCadastro;
 	}
 
-	public Blob getCurriculo() {
+	public String getCurriculo() {
 		return curriculo;
 	}
 
-	public void setCurriculo(Blob curriculo) {
+	public void setCurriculo(String curriculo) {
 		this.curriculo = curriculo;
 	}
 	
